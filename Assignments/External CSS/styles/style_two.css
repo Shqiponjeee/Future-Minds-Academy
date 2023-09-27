@@ -1,7 +1,22 @@
-p {
+h1 {
 
-    background-color: black;
+    background-color: gray;
     color: white;
-    font-size: 20px;
+    width: 100px;
+    
 }
 
+h2{
+    background-color: yellow;
+    color: yellowgreen;
+    font-size: 30px;
+    
+    
+}
+
+p {
+
+    background-color: red;
+    color: black;
+    font-size: 20px;
+}
