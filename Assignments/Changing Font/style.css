@@ -1,0 +1,21 @@
+.first-font {
+
+    background-color: aliceblue;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.second-font {
+
+    color: blueviolet;
+    font-family: 'Montserrat';
+    font-size: 18px;
+
+}
+
+.first-font>P {
+
+    background-color: grey;
+    color: white;
+    font-size: 20px;
+}

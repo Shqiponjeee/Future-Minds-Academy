@@ -1,0 +1,15 @@
+.hover {
+    background-color: aqua;
+    padding: 12px;
+    font-size: 14px;
+}
+
+
+.hover:hover {
+    background-color: yellowgreen;
+}
+
+
+.hover:hover::first-letter {
+    font-size: 24px;
+}
