@@ -2,7 +2,7 @@ table {
 
     width: 50%;
     border-collapse: collapse;
-    border-bottom: 1px solid white;
+    
 
 }
 
@@ -34,4 +34,9 @@ tr:nth-child(2n) {
 tr.first-row {
 
     color: black;
+}
+
+tr{
+
+    border-bottom: 1px solid white;
 }
