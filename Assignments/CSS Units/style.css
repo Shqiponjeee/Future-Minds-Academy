@@ -1,11 +1,13 @@
 body {
     margin: 0;
+ 
 }
 
 section {
     display: inline-block;
     height: 25vh;
     width: 100%;
+   
 }
 
 
