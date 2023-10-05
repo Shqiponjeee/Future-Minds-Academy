@@ -1,0 +1,33 @@
+img {
+  float: left;
+  border: 1px black;
+  margin: 8px 8px 8px 8px;
+  width: 300px;
+
+
+}
+
+p {
+
+  text-align: justify;
+  margin: 0px 5px 0px 0px;
+}
+
+img:hover {
+
+  border: 2px red;
+  border-style: dashed;
+  padding: 10px;
+  cursor: pointer;
+  width: 310px;
+
+}
+
+.box {
+
+  background-color: #F8DCAA;
+  color: black;
+  border: 5px solid black;
+  padding: 10px;
+  margin: 20px;
+}

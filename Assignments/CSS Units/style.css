@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+}
+
+section {
+    display: inline-block;
+    height: 25vh;
+    width: 100%;
+}
+
+
+section:nth-child(odd) {
+
+    background-color: #2E2928;
+    color: white;
+
+
+}
+
+section:nth-child(2n) {
+
+    background-color: grey;
+    color: black;
+
+}
+
+
+hr {
+
+    width: 33%;
+    border: 1px solid rgb(179, 39, 39);
+
+}
+
+h2 {
+
+
+    text-decoration: underline;
+    font-size: 1.5em;
+
+}
+
+p {
+
+    font-size: 1em;
+    width: 70%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
