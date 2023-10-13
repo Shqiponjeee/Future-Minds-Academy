@@ -18,7 +18,7 @@ nav a {
     text-align: center;
     text-decoration: none;
     background-color: grey;
-    color: black;
+    color: white;
     padding: 10px 10px;
     border-radius: 7px;
 
@@ -43,6 +43,7 @@ nav a:hover {
     background-color: darkgrey;
     color: white;
     cursor: pointer;
+
 }
 
 .main {
@@ -66,7 +67,7 @@ p {
 .first-section {
 
     background-color: rgba(128, 128, 128, 0.76);
-    color: black;
+    color: white;
     border: 5px solid black;
     border-radius: 8px;
     padding: 10px;
@@ -84,7 +85,7 @@ p {
 
 .second-section {
     background-color: #e08079;
-    color: black;
+    color: white;
     border: 5px solid black;
     border-radius: 8px;
     padding: 10px;
@@ -98,7 +99,7 @@ p {
 
 .second-section ul li::before {
     content: "•";
-    color: black;
+    color: white;
     margin-right: 5px;
 
 }
@@ -111,7 +112,7 @@ p {
 .first-li {
 
     background-color: #70423f;
-    color: black;
+    color: white;
     border: 2px;
     border-radius: 8px;
     padding: 10px;
@@ -123,7 +124,7 @@ p {
 .second-li {
 
     background-color: #70423f;
-    color: black;
+    color: white;
     border: 2px;
     border-radius: 8px;
     padding: 10px;
@@ -135,7 +136,7 @@ p {
 .third-li {
 
     background-color: #70423f;
-    color: black;
+    color: white;
     border: 2px;
     border-radius: 8px;
     padding: 10px;
@@ -147,7 +148,7 @@ p {
 
 .third-section {
     background-color: #a7e079;
-    color: black;
+    color: white;
     border: 5px solid black;
     border-radius: 8px;
     padding: 10px;
@@ -160,11 +161,22 @@ p {
     background-color: darkgreen;
 }
 
-table {
-
-    width: 60%;
+table.style {
     border-collapse: collapse;
+    width: 100%;
 }
+
+table.style tr,th {
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+
+tr,th.style {
+    padding: 5px;
+}
+
+
 
 .first-row {
 
@@ -186,7 +198,7 @@ tr:nth-child(2) th:nth-child(6) {
 
 .fourth-section {
     background-color: pink;
-    color: black;
+    color: white;
     border: 5px solid black;
     border-radius: 8px;
     padding: 10px;
@@ -206,10 +218,27 @@ ol {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a.read-more {
+    position: relative;
+    background-color: #e08079;
+    color: #fff;
+    text-decoration: none;
+    padding: 2px 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+
+a.read-more:hover {
+    background-color: #ff7b72;
+}
+
 footer p {
     background-color: #464240;
     color: white;
     text-align: center;
+    margin: 0;
+
 
 }
 
@@ -230,6 +259,7 @@ footer p {
     color: #414b4d;
     text-align: center;
     display: inline;
+    border: none;
 
 }
 
@@ -313,8 +343,8 @@ a.back-button {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
-    margin-left: 0;
-  
+
+
 
 }
 
@@ -426,9 +456,8 @@ input[type=email] {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border: none;
-    background-color: #58c79e;
-    color: black;
+    border: 2px solid grey;
+    border-radius: 4px;
 
 }
 
@@ -438,8 +467,8 @@ textarea {
     height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
+    border: 2px solid grey;
+    border-radius: 10px;
     background-color: #f8f8f8;
     font-size: 16px;
     resize: none;
@@ -447,7 +476,9 @@ textarea {
 }
 
 input[type=submit] {
-    background-color: #04AA6D;
+
+    background-color: #928f8f;
+    border-radius: 10px;
     border: none;
     color: white;
     padding: 16px 32px;
@@ -457,12 +488,81 @@ input[type=submit] {
 
 }
 
+input[type=submit]:hover {
+
+    background-color: #24282b;
+}
+
+input[type=email]:hover {
+
+    background-color: #928f8f;
+
+
+}
+
+.facebook {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.facebook:hover {
+    opacity: 0.7;
+}
+
+
+
+.gmail {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.gmail:hover {
+    opacity: 0.7;
+}
 
 p.back {
-    font-size: 18px; 
-    color: #333; 
-    text-align: left; 
-    margin-top: 150px; 
-    line-height: 1.5; 
-    font-weight: bold; 
+    font-size: 22px;
+    color: #333333;
+    text-align: left;
+    margin-top: 150px;
+    line-height: 1.0;
+    font-weight: lighter;
+}
+
+.home {
+
+    color: #108cbd;
+    font-size: 18px;
+
+}
+
+h2 {
+
+    background-color: #108cbd;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 15%;
+    height: 15%;
+    text-align: center;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+
+}
+
+h2:hover {
+
+    text-decoration: underline;
+
 }
