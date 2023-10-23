@@ -33,16 +33,17 @@ body {
 
 .card-price,
 .card-date {
-
     text-align: center;
     padding: 10px;
-    flex: 1;
     font-size: 3em;
-    border-right: 2px solid black;
-
-
+   
 }
 
+.card-date {
+    border-left: 3px solid black; 
+    
+       
+}
 
 
 .image-card {
