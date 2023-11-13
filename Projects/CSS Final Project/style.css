@@ -300,27 +300,7 @@ header {
 }
 
 
-.tooltip {
 
-    visibility: hidden;
-    background-color: darkgray;
-    color: white;
-    text-align: center;
-    position: absolute;
-    padding: 3px;
-    top: 60px;
-    left: 70px;
-    margin-left: 300px;
-    opacity: 0;
-    transition: opacity 0.8s;
-    border-radius: 6px;
-}
-
-.dashboard:hover .tooltip {
-
-    visibility: visible;
-    opacity: 1;
-}
 
 .person-info {
     margin-top: 3px;
@@ -357,9 +337,8 @@ header {
 }
 
 table {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-left: 10px;
-    width: 300px;
     border-collapse: collapse;
 }
 
@@ -376,17 +355,14 @@ td {
 .country-maps {
 
     display: flex;
-  
-
-
+    justify-content: space-between;
 }
 
 .map-embed iframe {
     display: flex;
-    justify-content: flex-end;
     top: 0;
     right: 0;
-   height: 100%;
+    height: 100%;
 }
 
 .glob-icon {
