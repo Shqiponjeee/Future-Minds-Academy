@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Dasboard Page</title>
 </head>
 
@@ -23,7 +24,9 @@
             </div>
             <div class="profile-info">
                 <span>John Doe</span>
+                <span class="material-icons expand">expand_more</span>
             </div>
+
         </div>
         <hr>
 
@@ -31,14 +34,17 @@
             <ul>
                 <li class="li-item">
                     <a class="active" href="#">
+
                         <span class="material-icons" title="Dashboard">dashboard</span>
                         <span>Dashboard</span>
+                        <span class="material-icons expand">expand_more</span>
                     </a>
                 </li>
                 <li class="li-item">
                     <a href="#">
                         <span class="material-icons" title="Pages">image</span>
                         <span>Pages</span>
+                        <span class="material-icons expand">expand_more</span>
                     </a>
 
                 </li>
@@ -46,30 +52,57 @@
                     <a href="#">
                         <span class="material-icons" title="Components">apps</span>
                         <span>Components</span>
+                        <span class="material-icons expand">expand_more</span>
                     </a>
+
                 </li>
                 <li class="li-item">
                     <a href="#">
                         <span class="material-icons" title="Forms">assignment</span>
                         <span>Forms</span>
+                        <span class="material-icons expand">expand_more</span>
                     </a>
                 </li>
                 <li class="li-item">
                     <a href="#">
                         <span class="material-icons" title="Tables">backup_table</span>
                         <span>Tables</span>
+                        <span class="material-icons expand">expand_more</span>
                     </a>
                 </li>
                 <li class="li-item">
                     <a href="#">
                         <span class="material-icons" title="Maps">location_on</span>
                         <span>Maps</span>
+                        <span class="material-icons expand">expand_more</span>
                     </a>
                 </li>
                 <li class="li-item">
                     <a href="#">
                         <span class="material-icons" title="Widgets">widgets</span>
                         <span>Widgets</span>
+                        <span class="material-icons expand">expand_more</span>
+                    </a>
+                </li>
+                <li class="li-item">
+                    <a href="#">
+                        <span class="material-icons" title="Charts">show_chart</span>
+                        <span>Charts</span>
+                        <span class="material-icons expand">expand_more</span>
+                    </a>
+                </li>
+                <li class="li-item">
+                    <a href="#">
+                        <span class="material-icons" title="Charts">show_chart</span>
+                        <span>Charts</span>
+                        <span class="material-icons expand">expand_more</span>
+                    </a>
+                </li>
+                <li class="li-item">
+                    <a href="#">
+                        <span class="material-icons" title="Charts">calendar_today</span>
+                        <span>Calendar</span>
+                        <span class="material-icons expand">expand_more</span>
                     </a>
                 </li>
             </ul>
@@ -77,26 +110,109 @@
     </div>
 
     <div class="main-content">
-        <div class="header">
-            <div class="circle" title="See more">
-                <div class="dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+
+        <header>
+            <div class="header-start">
+                <span class="dashboard"><span class="material-icons icon-more">more_vert</span><span class="tooltip">See
+                        more</span>
+                    <span class="header-title">Dashboard</span>
             </div>
-            <div class="header-title">
-                <span>Dashboard</span>
+            <div class="part-two">
+                <div class="search-box">
+                    <input class="search" type="text" placeholder="Search">
+                    <span class="material-icons search-icon">search</span><span class="tooltip">Search</span>
+                    <span class="material-icons dashboard-icon">dashboard</span><span class="tooltip">Dashboard</span>
+                </div>
+
+                <div class="
+                notification">
+                    <span class="material-icons notification-bell" title="notifications">notifications</span><span
+                        class="tooltip">Notifications</span>
+                    <span class="nr-notification">5</span>
+                    <div class="notifications-dropdown">
+                        <p class="notification-item">John Doe sent a message</p>
+                        <p class="notification-item">Someone viewed your profile</p>
+                        <p class="notification-item">John Doe sent a message</p>
+                        <p class="notification-item">Someone viewed your profile</p>
+                        <p class="notification-item">Another notification</p>
+                    </div>
+
+                </div>
+                <span class="material-icons person-info">person</span>
+            </div>
+        </header>
+
+        <div class="column-1">
+
+            <div class="global-title">
+                <span class="material-icons glob-icon">language</span>
+                <h4>Global Sales by Top Locations</h4>
+            </div>
+            <div class="country-maps">
+                <div class="country-sales">
+                    <table class="country-list">
+                        <tr>
+                            <td><img src="images/images/usa-flag.png" alt="usa-flag" class="flag">USA</td>
+                            <td>2.920</td>
+                            <td>53.23%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/images/germany.png" alt="germany flag" class="flag">Germany</td>
+                            <td>1.300</td>
+                            <td>4.34%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/images/australia.png" alt="australia flag" class="flag">Australia</td>
+                            <td>760</td>
+                            <td>20.43%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/images/uk.png" alt="uk" class="flag">United Kingdom</td>
+                            <td>690</td>
+                            <td>10.35%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/images/romania.png" alt="romania flag" class="flag">Romania</td>
+                            <td>600</td>
+                            <td>7.87%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/images/brasil.png" alt="brasil flag" class="flag">Brasil</td>
+                            <td>550</td>
+                            <td>5.94%</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="map-embed">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%20City%2C%20New%20York%2C%20Shtetet%20e%20Bashkuara%20t%C3%AB%20Amerik%C3%ABs!5e0!3m2!1ssq!2s!4v1699897654197!5m2!1ssq!2s"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
             </div>
 
-            <div class="user-info">
-                <div class="search-box">
-                    <span class="material-icons" title="Forms">search</span>
-                    <input type="text" placeholder="Search"/>
-                </div>
-            </div>
+
+
+
+
+
+
+
         </div>
-</div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
 </body>
 
 </html>
