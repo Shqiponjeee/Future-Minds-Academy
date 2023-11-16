@@ -8,28 +8,30 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Dasboard Page</title>
+    <title>Dashboard Page</title>
 </head>
 
 <body>
-
     <div class="sidebar">
+
         <div class="title">
             <h3>Cp Cool page</h3>
-            <hr>
+            
         </div>
+        <div class="horizontal-line"></div>
         <div class="profile">
             <div class="profile-image">
                 <img src="images/images/avatar.jpg" alt="John Doe's Profile Picture">
             </div>
             <div class="profile-info">
                 <span>John Doe</span>
-                <span class="material-icons expand">expand_more</span>
+            </div>
+            <div class="expand-icon">
+                <span class="material-icons expand-icon">expand_more</span>
             </div>
 
         </div>
-        <hr>
-
+        <div class="horizontal-line"></div>
         <div class="div-overlay">
             <ul>
                 <li class="li-item">
@@ -110,12 +112,10 @@
     </div>
 
     <div class="main-content">
-
         <header>
             <div class="header-start">
-                <span class="dashboard"><span class="material-icons icon-more" title="">more_vert</span>
-                        
-                    <span class="header-title">Dashboard</span>
+                <span class="material-icons icon-more" title="See more">more_vert</span>
+                <span class="title-header">Dashboard</span>
             </div>
             <div class="part-two">
                 <div class="search-box">
@@ -126,7 +126,7 @@
 
                 <div class="notification">
                     <span class="material-icons notification-bell" title="notifications">notifications</span>
-                    
+
                     <span class="nr-notification">5</span>
                     <div class="notifications-dropdown">
                         <p class="notification-item">John Doe sent a message</p>
@@ -139,10 +139,12 @@
                 </div>
                 <span class="material-icons person-info">person</span>
             </div>
+            <div class="hamburger-menu">
+                <span class="material-icons" title="Menu">menu</span>
+            </div>
         </header>
 
         <div class="column-1">
-
             <div class="global-title">
                 <span class="material-icons glob-icon">language</span>
                 <h4>Global Sales by Top Locations</h4>
@@ -191,27 +193,183 @@
                 </div>
 
             </div>
-
-
-
-
-
-
-
-
         </div>
 
+        <div class="grid-content">
+            <div class="blog-info">
+                <div class="bookings">
+                    <div class="icon">
+                        <span class="material-icons chair">chair</span>
+                    </div>
+                    <div class="grid-info">
+                        <span class="data">Bookings</span>
+                        <span class="numbers">184</span>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="space">
+                    <span class="material-icons">warning</span>Get more space
+                </div>
+            </div>
 
+            <div class="blog-info">
+                <div class="bookings">
+                    <div class="icon">
+                        <span class="material-icons bar-chart">bar_chart</span>
+                    </div>
+                    <div class="grid-info">
+                        <span class="data">Website Visits</span>
+                        <span class="numbers">75.521</span>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="space">
+                    <span class="material-icons">sell</span>Tracked from Google Analytics
+                </div>
+            </div>
 
+            <div class="blog-info">
+                <div class="bookings">
+                    <div class="icon">
+                        <span class="material-icons store">store</span>
+                    </div>
+                    <div class="grid-info">
+                        <span class="data">Revenue</span>
+                        <span class="numbers">$34,245</span>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="space">
+                    <span class="material-icons">date_range</span>Last 24 Hours
+                </div>
+            </div>
 
+            <div class="blog-info">
+                <div class="bookings">
+                    <div class="icon">
+                        <span class="material-icons public">public</span>
+                    </div>
+                    <div class="grid-info">
+                        <span class="data">Followers</span>
+                        <span class="numbers">+245</span>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="space">
+                    <span class="material-icons">update</span>Just updated
+                </div>
+            </div>
+        </div>
 
+        <div class="cards-container">
 
+            <div class="card">
 
+                <div class="image-card">
+                    <img src="images/images/card-1.jpeg">
+                    <div class="card-icons">
+                        <span class="material-icons bid_landscape" title="View">bid_landscape</span>
+                        <span class="material-icons delete" title="Delete">close</span>
+                        <span class="material-icons edit" title="Edit">edit</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h4 class="title">Cozy 5 Stars Apartment</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nisi
+                        aliquam deserunt illo
+                        quidem molestiae adipisci ipsam repellendus. Accusamus, saepe in ab et unde maiores iste?
+                        Ratione dolorem alias quas!</p>
+                </div>
+
+                <div class="hr1"></div>
+
+                <div class="bottom-content">
+
+                    <div class="price-card">
+                        <span>$899/night</span>
+                    </div>
+
+                    <div class="location-card">
+                        <span class="material-icons">location_on</span>
+                        <span>Barcelona,Spain</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="image-card">
+                    <img src="images/images/card-2.jpeg">
+                    <div class="card-icons">
+                        <span class="material-icons bid_landscape" title="View">bid_landscape</span>
+                        <span class="material-icons delete" title="Delete">close</span>
+                        <span class="material-icons edit" title="Edit">edit</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h4 class="title">Office Studio</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nisi
+                        aliquam deserunt illo
+                        quidem molestiae adipisci ipsam repellendus. Accusamus, saepe in ab et unde maiores iste?
+                        Ratione dolorem alias quas!</p>
+                </div>
+                <div class="hr1"></div>
+
+                <div class="bottom-content">
+
+                    <div class="price-card">
+                        <span>$1.119/night</span>
+                    </div>
+
+                    <div class="location-card">
+                        <span class="material-icons">location_on</span>
+                        <span>London, UK</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+
+                <div class="image-card">
+                    <img src="images/images/card-3.jpeg">
+
+                    <div class="card-icons">
+                        <span class="material-icons bid_landscape" title="View">bid_landscape</span>
+                        <span class="material-icons delete" title="Delete">close</span>
+                        <span class="material-icons edit" title="Edit">edit</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h4 class="title">Beautiful Castle</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nisi
+                        aliquam deserunt illo
+                        quidem molestiae adipisci ipsam repellendus. Accusamus, saepe in ab et unde maiores iste?
+                        Ratione dolorem alias quas!</p>
+                </div>
+                <div class="hr1"></div>
+                <div class="bottom-content">
+
+                    <div class="price-card">
+                        <span>$459/night</span>
+                    </div>
+
+                    <div class="location-card">
+                        <span class="material-icons">location_on</span>
+                        <span>Milan, Italy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="info">
+                <span>Home</span> <span>Company</span> <span>Protofolio</span>
+                <span>Blog</span>
+            </div>
+            <div class="rights">
+                <span>© John Doe 2023</span>
+            </div>
+        </footer>
     </div>
-
-
-
-
 </body>
 
 </html>
