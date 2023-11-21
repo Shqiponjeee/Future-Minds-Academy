@@ -75,7 +75,7 @@ body>*:nth-child(2) {
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .title h3 {
@@ -85,6 +85,7 @@ body>*:nth-child(2) {
     color: white;
     position: relative;
     z-index: 2;
+
 }
 
 .horizontal-line {
@@ -309,7 +310,6 @@ header {
     display: -webkit-box;
 
     display: -ms-flexbox;
-
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -479,9 +479,7 @@ header {
 .global-title {
 
     display: -webkit-box;
-
     display: -ms-flexbox;
-
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -532,19 +530,20 @@ table tr:last-child {
 .country-maps {
 
     display: -webkit-box;
-
     display: -ms-flexbox;
-
     display: flex;
     gap: 1em;
+}
+
+.country-list{
+
+    margin-left: 5px;
 }
 
 .map-embed {
 
     -webkit-box-flex: 1;
-
     -ms-flex: 1;
-
     flex: 1;
     padding-right: 15px;
     padding-bottom: 15px;
@@ -561,17 +560,25 @@ table tr:last-child {
 }
 
 .glob-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
     position: relative;
-    top: -10px;
-    left: 10px;
+    top: -20px;
+    left: 15px;
+    border: transparent;
     color: white;
-    padding: 10px;
-    border: 1px solid transparent;
-    border-radius: 2px;
-    background-color: rgba(0, 100, 0, 0.226);
-    background: -webkit-gradient(linear, left top, right top, from(rgb(114, 231, 124)), to(rgb(8, 236, 38)));
-    background: -o-linear-gradient(left, rgb(114, 231, 124)0%, rgb(8, 236, 38));
-    background: linear-gradient(90deg, rgb(114, 231, 124)0%, rgb(8, 236, 38));
+    padding: 15px;
+    background: rgba(2, 78, 21, 0.918);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(14, 139, 25, 0.938)), to(rgba(3, 46, 9, 0.918)));
+    background: -o-linear-gradient(left, rgba(12, 99, 19, 0.938)0%, rgba(18, 124, 32, 0.918));
+    background: linear-gradient(90deg, rgba(57, 150, 65, 0.938)0%, rgba(48, 187, 66, 0.918));
     border-radius: 2px;
 }
 
@@ -722,10 +729,10 @@ table tr:last-child {
 }
 
 .store {
-    background: rgba(8, 236, 65, 0.918);
-    background: -webkit-gradient(linear, left top, right top, from(rgba(114, 231, 124, 0.938)), to(rgba(8, 236, 38, 0.918)));
-    background: -o-linear-gradient(left, rgba(114, 231, 124, 0.938)0%, rgba(8, 236, 38, 0.918));
-    background: linear-gradient(90deg, rgba(114, 231, 124, 0.938)0%, rgba(8, 236, 38, 0.918));
+    background: rgba(2, 78, 21, 0.918);
+    background: -webkit-gradient(linear, left top, right top, from(rgba(14, 139, 25, 0.938)), to(rgba(3, 46, 9, 0.918)));
+    background: -o-linear-gradient(left, rgba(12, 99, 19, 0.938)0%, rgba(18, 124, 32, 0.918));
+    background: linear-gradient(90deg, rgba(57, 150, 65, 0.938)0%, rgba(48, 187, 66, 0.918));
     border-radius: 2px;
 }
 
@@ -844,29 +851,32 @@ table tr:last-child {
 }
 
 .card-info {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
 
-    display: -webkit-box;
-
-    display: -ms-flexbox;
-
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    font-size: 1.2em;
     color: var(--primary-text-color);
+    margin-top: -10px;
+
+
+
 }
 
 .paragraph {
 
     font-weight: 100;
     color: var(--secondary-text-color);
+    margin-top: -10px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+
+
 }
 
 .hr1 {
@@ -893,31 +903,25 @@ table tr:last-child {
 .price-card .location-card {
 
     display: -webkit-box;
-
     display: -ms-flexbox;
-
     display: flex;
+    margin-top: auto;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    margin-top: 10px;
+    align-items: end;
+
 }
 
 .location-card {
 
     color: var(--secondary-text-color);
-    margin-right: 10px;
+    margin-right: 1rem;
 
 }
 
-.material-icons {
+.price-card {
 
-    margin-right: 0;
-    font-size: 0.1em;
-
+    margin-left: 1rem;
 }
 
 .bid_landscape {
@@ -951,6 +955,7 @@ footer {
     margin-right: 15px;
     font-size: 1em;
 
+
 }
 
 .rights span {
@@ -971,13 +976,20 @@ footer {
         display: none;
     }
 
-    .icon-more {
+    .title-header,
+    .hamburger-menu {
 
-        display: none;
+        display: block;
     }
 
-    .hamburger-menu {
-        display: block;
+    .icon-more {
+        display: none !important;
+    }
+
+    .header-start {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .part-two {
@@ -985,13 +997,11 @@ footer {
         display: none;
     }
 
-    .header-start {
-        display: none;
-    }
-
     .column-1 {
         min-width: 100%;
+        margin-left: 10px;
         margin: 0;
+        margin-top: 50px;
     }
 
     table {
@@ -1001,9 +1011,7 @@ footer {
     .country-maps {
 
         display: -webkit-box;
-
         display: -ms-flexbox;
-
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -1022,6 +1030,8 @@ footer {
         grid-template-columns: 1fr;
         -ms-grid-rows: auto;
         grid-template-rows: auto;
+        padding: 10px;
+
 
     }
 
@@ -1033,11 +1043,17 @@ footer {
 
     }
 
+    .grid-content {
+
+        margin-bottom: 20px;
+    }
+
     .cards-container {
         -ms-grid-columns: 1fr 3rem 1fr;
         grid-template-columns: 1fr 1fr;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         gap: 3rem;
+
     }
 
 
@@ -1066,6 +1082,7 @@ footer {
     .column-1 {
         min-width: 100%;
         margin: 0;
+        margin-top: 50px;
 
     }
 
