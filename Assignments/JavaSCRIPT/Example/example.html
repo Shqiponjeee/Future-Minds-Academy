@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="fname" id="label">Emri dhe Mbiemri:</label><br>
+        <input type="text" id="fname" placeholder="Filan Fisteku" id="input"><br>
+    </form>
+    <script>
+        let language = prompt('Cfare gjuhe flisni?:');
+        let fname;
+        let placeholder;
+
+        if (language == 'sq') {
+            fname = 'Filan Fisteku';
+
+            placeholder = 'Emri dhe Mbiemri';
+        }
+        else if (language == 'en') {
+            fname = 'John Doe';
+            placeholder = 'Name and Surname';
+
+        }
+        else if (language == 'de') {
+            fname = 'Max Musterman';
+            placeholder = 'Vorname';
+        }
+        else {
+            throw new Error('Unsupported language');
+        }
+
+        document.getElementById('label').innerHTML = fname;
+        document.getElementById('fname').innerHTML = placeholder;
+
+    </script>
+</body>
+
+</html>

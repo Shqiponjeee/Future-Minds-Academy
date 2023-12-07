@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+.progress-bar-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+}
+
+.progress-bar-wrapper {
+    position: relative;
+    height: 200px;
+
+}
+
+.progress-bar {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: green;
+
+}
+
+.indicator {
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: grey;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute;
+    top: 20px;
+    left: 100%;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.progress-bar-wrapper:hover .tooltip {
+    opacity: 1;
+}
