@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let HailsoneNumber = prompt("Write a number:");
+
+        while (HailsoneNumber != 1) {
+            if (HailsoneNumber % 2 == 0) {
+                HailsoneNumber = HailsoneNumber / 2;
+                console.log(HailsoneNumber);
+            } else if (HailsoneNumber % 2 != 0) {
+                HailsoneNumber = HailsoneNumber * 3 + 1;
+                console.log(HailsoneNumber);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
