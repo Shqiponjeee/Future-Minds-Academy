@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let convertKmToMiles=(kilometers) =>{
+            let kilometersFactor = 0.621371;
+            let miles = kilometers * kilometersFactor;
+            return miles;
+        }
+
+        let kilometersValue = 20;
+        let milesValue = convertKmToMiles(kilometersValue);
+
+        console.log(`${kilometersValue} kilometers is approximately ${milesValue.toFixed(2)} miles.`);
+    </script>
+</body>
+</html>
