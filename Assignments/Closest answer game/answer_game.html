@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="correct-answer-content">
+        <span class="title" id="title-content"></span>
+        <div class="players">
+            <div class="player-1" id="player-one">
+                <div>Player One</div>
+                <div class="1-answer" id="first-answer"></div>
+            </div>
+            <div class="player-2" id="player-two">
+                <div>Player Two</div>
+                <div class="2-answer" id="second-answer"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let answer = Math.floor(Math.random() * 20) + 1;
+
+        let playerOne = parseInt(prompt('Player One:'));
+        let playerTwo = parseInt(prompt('Player Two:'));
+
+        if (isNaN(playerOne) || isNaN(playerTwo))
+            throw new Error('Please write only numbers!');
+
+        if ((playerOne < 0 || playerOne > 20) ||
+            (playerTwo < 0 || playerTwo > 20)) {
+            throw new Error('Only select numbers between 0-20');
+        }
+
+        let playerOneDistance = Math.abs(answer - playerOne);
+        let playerTwoDistance = Math.abs(answer - playerTwo);
+
+
+        let winner;
+        if (playerOneDistance < playerTwoDistance)
+            winner = 'Player One';
+        else if ((playerOneDistance > playerTwoDistance))
+            winner = 'Player Two';
+        else {
+            winner = "It's a tie.";
+        }
+
+        let colorPlayerOne;
+        let colorPlayerTwo;
+
+        if (playerOneDistance < playerTwoDistance) {
+            colorPlayerOne = 'green';
+            colorPlayerTwo = 'red';
+        }
+        else if (playerOneDistance > playerTwoDistance) {
+            colorPlayerOne = 'red';
+            colorPlayerTwo = 'green';
+        }
+        else {
+            colorPlayerOne = 'orange';
+            colorPlayerTwo = 'orange';
+        }
+
+
+        let playerOneDiv = document.getElementById('player-one');
+        let playerTwoDiv = document.getElementById('player-two');
+        let title = document.getElementById('title-content');
+        title.innerHTML = `The correct answer is ${answer}`;
+        playerOneDiv.style.backgroundColor = colorPlayerOne;
+        playerTwoDiv.style.backgroundColor = colorPlayerTwo;
+        let firstAnswerDiv = document.getElementById('first-answer');
+        let secondAnswerDiv = document.getElementById('second-answer');
+        firstAnswerDiv.innerHTML = `${playerOne}`;
+        secondAnswerDiv.innerHTML = `${playerTwo}`;
+
+
+
+        console.log(`The correct answer is: ${answer}`)
+        console.log(`The winner is: ${winner}`);
+
+
+    </script>
+</body>
+
+</html>
