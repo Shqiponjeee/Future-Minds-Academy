@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Spaghetti</title>
+</head>
+
+<body>
+    <script>
+
+        // Exampel 1:
+        let text = '     hello, dolly! ';
+        text = text.trim().charAt(0).toLocaleLowerCase();
+
+        console.log(text);
+
+        // Exampel 2:
+
+        let timeString = '05:36 PM';
+
+        let hours = parseInt(timeString.substring(0, 2));
+        let minutes = parseInt(timeString.substring(3, 5));
+        let period = parseInt(timeString.substring(6));
+        console.log('Hours:', hours);
+        console.log('Minutes:', minutes);
+        console.log('Period:', period);
+
+
+        let temperature = 'New York, 15°C';
+        let presja = temperature.indexOf(',');
+        let city = temperature.substring(0, presja);
+        let temp = parseInt(temperature.substring(presja + 2, temperature.length - 2));
+        console.log(`Qyteti${city} dhe temperatura: ${temp}`)
+
+
+
+    </script>>
+</body>
+
+</html>
