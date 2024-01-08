@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #taskContainer {
+            background-color: #3498db;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+        }
+
+        #taskList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="taskContainer">
+        <p id="date"></p>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        function getCurrentDate() {
+            let now = new Date();
+            let month = String(now.getMonth() + 1).padStart(2, '0');
+            let day = String(now.getDate()).padStart(2, '0');
+            let year = now.getFullYear();
+            return `${month}/${day}/${year}`;
+        }
+
+        function promptForTask() {
+            let task = prompt('Enter tasks for the day:');
+            return task ? task.trim() : null;
+        }
+
+        function addTaskToList(task) {
+            let taskList = document.getElementById('taskList');
+            let listItem = document.createElement('li');
+            listItem.textContent = task;
+            taskList.appendChild(listItem);
+        }
+
+
+        let dateElement = document.getElementById('date');
+        dateElement.textContent = 'Tasks for ' + getCurrentDate();
+
+        let userTask;
+        do {
+            userTask = promptForTask();
+            if (userTask) {
+                addTaskToList(userTask);
+            }
+        } while (userTask !== null);
+    </script>
+</body>
+
+</html>
