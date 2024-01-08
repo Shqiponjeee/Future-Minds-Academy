@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let circle = {
+            radius: 5,
+            center: {
+                x: 0,
+                y: 0
+            },
+            getRadius: function () {
+                return this.radius;
+            },
+
+            setRadius: function (radius) {
+                this.radius = radius;
+            },
+
+            area: function () {
+                return Math.PI * this.radius ** 2;
+            },
+
+            perimeter: function () {
+                return 2 * Math.PI * this.radius;
+            },
+
+            getCenter: function () {
+                return this.center;
+            },
+
+            setCenter: function (x, y) {
+                this.center.x = x;
+                this.center.y = y;
+            },
+
+            grow: function (amount) {
+                this.radius += amount;
+            },
+
+            shrink: function (amount) {
+                
+                this.radius = Math.max(0, this.radius - amount);
+            },
+
+            printDetails: function () {
+                console.log("Circle Details:");
+                console.log(`Radius: ${this.radius}`);
+                console.log(`Center: (${this.center.x}, ${this.center.y})`);
+                console.log(`Area: ${this.area()}`);
+                console.log(`Perimeter: ${this.perimeter()}`);
+            },
+        };
+
+        circle.printDetails();
+
+
+
+
+    </script>
+</body>
+
+</html>
