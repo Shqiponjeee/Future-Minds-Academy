@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Circles</title>
+    <style>
+        .circle {
+            background-color: red;
+            opacity: 0.7;
+            position: fixed;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function getRandomColor() {
+            let letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function createCircle() {
+            let circle = document.createElement('div');
+            circle.className = 'circle';
+
+            let size = getRandomInt(10, 100);
+            let left = getRandomInt(0, window.innerWidth - size);
+            let top = getRandomInt(0, window.innerHeight - size);
+            let color = getRandomColor();
+
+            circle.style.width = size + 'px';
+            circle.style.height = size + 'px';
+            circle.style.left = left + 'px';
+            circle.style.top = top + 'px';
+            circle.style.backgroundColor = color;
+
+            document.body.appendChild(circle);
+        }
+
+        for (let i = 0; i < 300; i++) {
+            createCircle();
+        }
+    </script>
+</body>
+
+</html>
