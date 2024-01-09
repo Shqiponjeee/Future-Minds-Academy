@@ -45,7 +45,7 @@
             },
 
             shrink: function (amount) {
-                
+
                 this.radius = Math.max(0, this.radius - amount);
             },
 
@@ -56,9 +56,28 @@
                 console.log(`Area: ${this.area()}`);
                 console.log(`Perimeter: ${this.perimeter()}`);
             },
+
+            equals: function (otherCircle) {
+                if (!otherCircle) {
+                    console.error('Invalid circle object provided.');
+                    return false;
+                }
+
+                return this.radius == otherCircle.radius &&
+                    this.center.x == otherCircle.center.x &&
+                    this.center.y == otherCircle.center.y;
+            }
+        };
+
+
+        let otherCircle = {
+            radius: 5,
+            center: { x: 0, y: 0 }
         };
 
         circle.printDetails();
+        console.log(circle.equals(otherCircle));
+
 
 
 
