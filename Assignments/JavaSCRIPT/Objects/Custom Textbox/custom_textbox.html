@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Textbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #textbox {
+            width: 200px;
+            height: 30px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            outline: none;
+            background-color: black;
+            color: white;
+            transition: border-color 0.3s;
+        }
+
+        #textbox::placeholder {
+            color: #555;
+        }
+
+        #textbox:focus {
+            border-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="textbox" placeholder="Start typing">
+
+    <script>
+        let textbox = document.getElementById('textbox');
+        textbox.addEventListener('keypress', (event) => {
+            let character = event.key;
+
+            if (character === null && event.inputType === 'deleteContentBackward') {
+
+                textbox.textContent = textbox.textContent.slice(0, -1);
+            } else {
+                textbox.textContent += character;
+            }
+
+        });
+    </script>
+</body>
+
+</html>
