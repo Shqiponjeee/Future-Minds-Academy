@@ -16,7 +16,7 @@
             position: fixed;
             animation: moveUpDown 5s infinite alternate;
             cursor: pointer;
-            /* Add cursor style to indicate clickability */
+
         }
 
         @keyframes moveUpDown {
@@ -45,23 +45,21 @@
         function handleBubbleClick(event) {
             const clickedElement = event.target;
 
-            // Check if the clicked element has the class "bubble"
+
             if (clickedElement.classList.contains('bubble')) {
-                // Remove the clicked bubble from the DOM
+
                 clickedElement.remove();
 
-                // Check if all bubbles are popped
+
                 const remainingBubbles = document.querySelectorAll('.bubble').length;
                 if (remainingBubbles === 0) {
-                    // Show success message when all bubbles are popped
+
                     alert('Congratulations! You popped all the bubbles and won the game!');
                 }
             }
         }
-
         document.body.addEventListener('click', handleBubbleClick);
 
-        // Create bubbles
         for (let i = 0; i < 300; i++) {
             let bubble = document.createElement('div');
             bubble.classList.add('bubble');
