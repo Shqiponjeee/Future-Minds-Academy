@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Circles Animation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f5f5f5;
+            transition: background-color 1s ease-in-out;
+        }
+
+        #toggleButton {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        #hiddenCircles {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin: 10px;
+            animation: fadeInAndScale 1s ease-in-out;
+            opacity: 0;
+        }
+
+        @keyframes fadeInAndScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="toggleButton">Show Object Circles</button>
+
+    <div id="hiddenCircles">
+    </div>
+    <script>
+        let toggleButton = document.getElementById('toggleButton');
+        let hiddenCircles = document.getElementById('hiddenCircles');
+
+        colorNames = ['Red', 'Green', 'Blue', 'Yellow', 'Purple', 'Orange', 'Pink', 'Cyan', 'Brown', 'Gray'];
+
+        toggleButton.addEventListener('click', () => {
+            hiddenCircles.innerHTML = '';
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    let circle = document.createElement('div');
+                    circle.classList.add('circle');
+                    let colorName = getRandomColorName();
+                    circle.style.backgroundColor = colorName.toLowerCase();
+                    hiddenCircles.appendChild(circle);
+
+
+                    let circleObject = {
+                        index: i + 1,
+                        color: colorName
+                    };
+
+                    displayCircleInfo(circleObject);
+                }, i * 700);
+            }
+
+            changeBackgroundColor();
+        });
+
+        function getRandomColorName() {
+            return colorNames[Math.floor(Math.random() * colorNames.length)];
+        }
+
+        function changeBackgroundColor() {
+
+            document.body.style.backgroundColor = getRandomColorName().toLowerCase();
+        }
+
+        function displayCircleInfo(circleObject) {
+
+            let info = document.createElement('p');
+            info.textContent = `Circle ${circleObject.index} - Color: ${circleObject.color}`;
+            hiddenCircles.appendChild(info);
+        }
+    </script>
+
+</body>
+
+</html>
