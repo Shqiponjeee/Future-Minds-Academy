@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        #timer {
+
+            font-size: 3em;
+            color: #40c437;
+            font-family: consolas, monospace;
+            margin-bottom: 20px;
+
+        }
+
+        #startBtn,
+        #lapBtn,
+        #stopBtn,
+        #resetBtn {
+
+            gap: 10px;
+            border: 3px solid;
+            border-radius: 12px;
+            background-color: #333333;
+            color: white;
+            cursor: pointer;
+            font-size: 1em;
+            font-family: consolas, monospace;
+            padding: 10px;
+        }
+
+        #timerContainer {
+            text-align: center;
+            border: 3px solid;
+            border-radius: 20px;
+            background-color: #222222;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="timerContainer">
+        <div id="timer">00:00:00</div>
+        <button id="startBtn" onclick="start()">Start</button>
+        <button id="lapBtn" onclick="lap()" disabled>Lap</button>
+        <button id="stopBtn" onclick="stop()" disabled>Stop</button>
+        <button id="resetBtn" onclick="reset()" disabled>Reset</button>
+    </div>
+
+    <script>
+        let startTime;
+        let laps = [];
+        let timerInterval;
+
+        function start() {
+            startTime = new Date().getTime();
+            timerInterval = setInterval(updateTimer, 10);
+            document.getElementById('startBtn').disabled = true;
+            document.getElementById('lapBtn').disabled = false;
+            document.getElementById('stopBtn').disabled = false;
+            document.getElementById('resetBtn').disabled = false;
+        }
+
+        function updateTimer() {
+            const currentTime = new Date().getTime();
+            const elapsedTime = currentTime - startTime;
+            const formattedTime = formatTime(elapsedTime);
+            document.getElementById('timer').textContent = formattedTime;
+        }
+
+        function formatTime(time) {
+            const minutes = Math.floor(time / (60 * 1000));
+            const seconds = Math.floor((time % (60 * 1000)) / 1000);
+            const milliseconds = Math.floor((time % 1000) / 10);
+            return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}:${String(milliseconds).padStart(2, '0')}`;
+        }
+
+        function lap() {
+            const currentTime = new Date().getTime();
+            const lapTime = currentTime - startTime;
+            laps.push(formatTime(lapTime));
+            updateLaps();
+        }
+
+        function updateLaps() {
+            const lapList = document.createElement('ul');
+            laps.forEach((lap, index) => {
+                const lapItem = document.createElement('li');
+                lapItem.textContent = `Lap ${index + 1}: ${lap}`;
+                lapList.appendChild(lapItem);
+            });
+            document.body.appendChild(lapList);
+        }
+
+        function stop() {
+            clearInterval(timerInterval);
+            document.getElementById('startBtn').disabled = false;
+            document.getElementById('lapBtn').disabled = true;
+            document.getElementById('stopBtn').disabled = true;
+            document.getElementById('resetBtn').disabled = false;
+        }
+
+        function reset() {
+            clearInterval(timerInterval);
+            document.getElementById('timer').textContent = '00:00:00';
+            document.getElementById('startBtn').disabled = false;
+            document.getElementById('lapBtn').disabled = true;
+            document.getElementById('stopBtn').disabled = true;
+            document.getElementById('resetBtn').disabled = true;
+            laps = [];
+            const lapList = document.querySelector('ul');
+            if (lapList) {
+                document.body.removeChild(lapList);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

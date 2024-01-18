@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #e44d26;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            color: #555;
+        }
+
+        strong {
+            display: block;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #e44d26;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let cart = [
+            {
+                title: 'Milk',
+                category: 'Food',
+                quantity: 3,
+                price: 1.65
+            },
+            {
+                title: 'Bread',
+                category: 'Food',
+                quantity: 2,
+                price: 2.25
+            },
+            {
+                title: 'Smartphone',
+                category: 'Electronics',
+                quantity: 1,
+                price: 699.99
+            },
+            {
+                title: 'Running Shoes',
+                category: 'Fashion',
+                quantity: 1,
+                price: 49.99
+            },
+            {
+                title: 'Book: The Hitchhiker\'s Guide to the Galaxy',
+                category: 'Books',
+                quantity: 1,
+                price: 12.99
+            },
+            {
+                title: 'Coffee Maker',
+                category: 'Appliances',
+                quantity: 1,
+                price: 34.99
+            },
+            {
+                title: 'Gaming Laptop',
+                category: 'Electronics',
+                quantity: 1,
+                price: 1299.99
+            },
+            {
+                title: 'Sunglasses',
+                category: 'Fashion',
+                quantity: 2,
+                price: 19.99
+            }
+        ];
+
+        const totalPrice = cart.reduce((total, item) => total + (item.quantity * item.price), 0);
+
+        const itemList = document.createElement('ul');
+
+        cart.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+            <span>${item.title}</span>
+            <span>${item.quantity} * ${item.price.toFixed(2)} = ${(item.quantity * item.price).toFixed(2)}$</span>
+        `;
+            itemList.appendChild(listItem);
+        });
+
+        const totalElement = document.createElement('strong');
+        totalElement.textContent = `Total Price: ${totalPrice.toFixed(2)}$`;
+
+        document.body.innerHTML = '';
+        document.body.appendChild(document.createElement('h1')).textContent = 'Shopping Cart';
+        document.body.appendChild(itemList);
+        document.body.appendChild(totalElement);
+    </script>
+
+</body>
+
+</html>
