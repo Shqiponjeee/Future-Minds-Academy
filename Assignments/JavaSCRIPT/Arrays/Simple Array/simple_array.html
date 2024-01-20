@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        #taskList {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #taskList li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var taskList = [];
+
+
+            function promptUser() {
+                for (var i = 0; i < 5; i++) {
+                    var task = prompt("Write a task for today");
+                    taskList.push(task);
+                }
+            }
+
+
+            function displayTasks() {
+                var taskListElement = document.getElementById('taskList');
+
+
+                taskListElement.innerHTML = '';
+
+
+                taskList.forEach(function (task) {
+                    var listItem = document.createElement('li');
+                    listItem.textContent = task;
+                    taskListElement.appendChild(listItem);
+                });
+            }
+
+
+            promptUser();
+
+            displayTasks();
+        });
+    </script>
+
+</body>
+
+</html>
