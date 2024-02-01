@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        #requirements {
+            margin-top: 10px;
+            color: #777;
+        }
+
+        .valid {
+            color: green;
+        }
+
+        .invalid {
+            color: red;
+        }
+
+        #submitBtn {
+            display: none;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #submitBtn:hover {
+            background-color: #45a049;
+        }
+
+        .email-error {
+            color: red;
+            margin-top: -10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="myForm">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <div class="email-error invalid">Invalid email format</div>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <div id="requirements">
+            <p class="lowercase invalid">At least one lowercase letter</p>
+            <p class="uppercase invalid">At least one uppercase letter</p>
+            <p class="number invalid">At least one number</p>
+            <p class="special invalid">At least one of (.,'!#)</p>
+        </div>
+
+        <button type="button" id="submitBtn" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+        let emailInput = document.getElementById('email');
+        let passwordInput = document.getElementById('password');
+        let requirements = document.getElementById('requirements');
+        let submitBtn = document.getElementById('submitBtn');
+        let emailError = document.querySelector('.email-error');
+
+        emailInput.addEventListener('input', validateEmail);
+        passwordInput.addEventListener('input', validatePassword);
+
+        function validateEmail() {
+            let isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
+            emailError.style.display = emailInput.value && !isValidEmail ? 'block' : 'none';
+            updateValidationStatus(isValidEmail, emailInput);
+        }
+
+        function validatePassword() {
+            let hasLowercase = /[a-z]/.test(passwordInput.value);
+            let hasUppercase = /[A-Z]/.test(passwordInput.value);
+            let hasNumber = /\d/.test(passwordInput.value);
+            let hasSpecialChar = /[.,'!#]/.test(passwordInput.value);
+
+            updateValidationStatus(hasLowercase, passwordInput, 'lowercase');
+            updateValidationStatus(hasUppercase, passwordInput, 'uppercase');
+            updateValidationStatus(hasNumber, passwordInput, 'number');
+            updateValidationStatus(hasSpecialChar, passwordInput, 'special');
+
+            let isValidPassword = hasLowercase && hasUppercase && hasNumber && hasSpecialChar;
+            updateSubmitButton(isValidPassword);
+        }
+
+        function updateValidationStatus(isValid, inputElement, validationType) {
+            let validationMessage = requirements.querySelector(`.${validationType}`);
+            if (isValid) {
+                validationMessage.classList.remove('invalid');
+                validationMessage.classList.add('valid');
+            } else {
+                validationMessage.classList.remove('valid');
+                validationMessage.classList.add('invalid');
+            }
+        }
+
+        function updateSubmitButton(isValidPassword) {
+            if (isValidPassword) {
+                submitBtn.style.display = 'block';
+            } else {
+                submitBtn.style.display = 'none';
+            }
+        }
+
+        function submitForm() {
+            alert('Form submitted!');
+        }
+    </script>
+</body>
+
+</html>

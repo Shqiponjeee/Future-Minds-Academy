@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .toggle-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .toggle-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-btn:hover {
+            background-color: #555;
+        }
+
+
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        header.dark-mode {
+            background-color: #222;
+        }
+
+        main.dark-mode {
+            background-color: #444;
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        .toggle-btn {
+            transition: color 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Beautiful Website</h1>
+    </header>
+
+    <main>
+        <h2>Heading 2</h2>
+        <p>This is a paragraph of text.</p>
+
+        <h3>Heading 3</h3>
+        <p>Another paragraph here. Keep your content concise and engaging.</p>
+    </main>
+
+    <div class="toggle-container">
+        <button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+    </div>
+
+    <script>
+
+        let savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.body.classList.add(savedTheme);
+        }
+
+        function toggleTheme() {
+            let = document.body;
+            let.classList.toggle('dark-mode');
+
+            let = let.classList.contains('dark-mode') ? 'dark-mode' : '';
+            localStorage.setItem('theme', let);
+        }
+    </script>
+
+</body>
+
+</html>
