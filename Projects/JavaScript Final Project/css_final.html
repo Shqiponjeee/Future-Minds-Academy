@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dashboard Page</title>
+</head>
+
+<body>
+    <div class="sidebar" id="sidebar">
+        <div class="title">
+            <h3>CP <span class="cp">Cool page</span></h3>
+        </div>
+        <div class="horizontal-line"></div>
+        <div class="profile">
+            <div class="profile-image">
+                <img src="images/images/avatar.jpg" alt="John Doe's Profile Picture">
+            </div>
+            <div class="profile-info">
+                <span id="description">John Doe</span>
+            </div>
+            <div class="expand-icon" id="expandIcon">
+                <span class="material-icons">expand_more</span>
+            </div>
+        </div>
+        <div class="horizontal-line"></div>
+        <div class="div-overlay">
+            <ul>
+                <li class="li-item">
+                    <a class="active" href="#">
+                        <span class="material-icons" title="Dashboard">dashboard</span>
+                        <span class="pages">Dashboard</span>
+                        <span class="material-icons expand">expand_more</span>
+                    </a>
+                </li>
+                <li class="li-item">
+                    <a href="#">
+                        <span class="material-icons" title="Pages">image</span>
+                        <span class="pages">Pages</span>
+                        <span class="material-icons expand">expand_more</span>
+                    </a>
+                    <div class="side-dropdown">
+                        <ul class="dropdown-list">
+                            <li><span>Regular Pages</span></li>
+                            <li><span>Extended Pages</span></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li class="li-item">
+                    <a href="#">
+                        <span class="material-icons" title="Components">apps</span>
+                        <span class="pages">Components</span>
+                        <span class="material-icons expand">expand_more</span>
+                    </a>
+                    <div class="side-dropdown">
+                        <ul class="dropdown-list">
+                            <li><span>Regular Components</span></li>
+                            <li><span>Extended Components</span></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li class="li-item">
+                    <a href="#">
+                        <span class="material-icons" title="Forms">assignment</span>
+                        <span class="pages">Forms</span>
+                        <span class="material-icons expand">expand_more</span>
+                    </a>
+                    <div class="side-dropdown">
+                        <ul class="dropdown-list">
+                            <li><span>Regular Forms</span></li>
+                            <li><span>Iregular Forms</span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li-item">
+                    <a href="#">
+                        <span class="material-icons" title="Tables">backup_table</span>
+                        <span class="pages">Tables</span>
+                        <span class="material-icons expand">expand_more</span>
+                    </a>
+
+                </li>
+                <li class="li-item">
+                    <a href="#">
+                        <span class="material-icons" title="Maps">location_on</span>
+                        <span class="pages">Maps</span>
+                        <span class="material-icons expand">expand_more</span>
+                    </a>
+                </li>
+                <li class="li-item">
+                    <a href="#">
+                        <span class="material-icons" title="Widgets">widgets</span>
+                        <span class="pages">Widgets</span>
+                        <span class="material-icons expand">expand_more</span>
+                    </a>
+                    <div class="side-dropdown">
+                        <ul class="dropdown-list">
+                            <li><span>Regular Pages</span></li>
+                            <li><span>Extended Pages</span></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="li-item">
+                    <a href="#">
+                        <span class="material-icons" title="Charts">show_chart</span>
+                        <span class="pages">Charts</span>
+                        <span class="material-icons expand">expand_more</span>
+                    </a>
+                </li>
+                <li class="li-item">
+                    <a href="#">
+                        <span class="material-icons" title="Calendar">calendar_today</span>
+                        <span class="pages">Calendar</span>
+                        <span class="material-icons expand">expand_more</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <div class="header-start">
+                <span id="sidebar-control" class="material-icons icon-more" title="See more">more_vert</span>
+                <!--
+                <span id="menu-icon" class="material-icons collapsed" title="Menu">menu</span>
+                -->
+                <span class="title-header">Dashboard</span>
+            </div>
+
+            <div class="part-two">
+                <div class="search-box">
+                    <input class="search" type="text" placeholder="Search">
+                    <span class="material-icons search-icon">search</span>
+                    <span class="material-icons dashboard-icon">dashboard</span>
+                </div>
+
+                <div class="notification" id="notifications">
+                    <span class="material-icons notification-bell" title="notifications">notifications</span>
+
+                    <span class="nr-notification">5</span>
+                    <div class="notifications-dropdown">
+                        <p class="notification-item">John Doe sent a message</p>
+                        <p class="notification-item">Someone viewed your profile</p>
+                        <p class="notification-item">John Doe sent a message</p>
+                        <p class="notification-item">Someone viewed your profile</p>
+                        <p class="notification-item">Another notification</p>
+                    </div>
+
+                </div>
+                <span class="material-icons person-info">person</span>
+            </div>
+            <div class="hamburger-menu">
+                <span class="material-icons" title="Menu">menu</span>
+            </div>
+        </header>
+        <span id="settings-icon" class="material-icons" title="Open Settings">settings</span>
+        <div id="settings-div">
+            <p id="sidebar-filter">SIDEBAR FILTERS</p>
+            <div class="color-circles">
+                <span class="color-circle selected"></span>
+                <span class="color-circle" id="red" tabindex="0"></span>
+                <span class="color-circle" id="green" tabindex="0"></span>
+                <span class="color-circle" id="blue" tabindex="0"></span>
+                <span class="color-circle" id="yellow" tabindex="0"></span>
+                <span class="color-circle" id="cyan" tabindex="0"></span>
+            </div>
+            <div class="separator"></div>
+            <p id="sidebar-text">SIDEBAR BACKGROUND</p>
+            <div class="overlay-background">
+                <div class="sidebar-circles">
+                    <div id="white-circle" tabindex="0"></div>
+                    <div id="black-circle" tabindex="0"></div>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="sidebar-image-container">
+                <p>Sidebar images</p>
+                <div class="switch-container">
+                    <label class="switch">
+                        <input type="checkbox" id="imageSwitch" name="imageSwitch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="sidebar-image">
+                <p>IMAGES</p>
+                <div class="image-container">
+                    <img src="images/images/sidebar-1.jpg" class="image" tabindex="0">
+                    <img src="images/images/sidebar-2.jpg" class="image" tabindex="0">
+                    <img src="images/images/sidebar-3.jpg" class="image" tabindex="0">
+                    <img src="images/images/sidebar-4.jpg" class="image" tabindex="0">
+                </div>
+            </div>
+        </div>
+        <div class="column-1">
+            <div class="global-title">
+                <span class="material-icons glob-icon">language</span>
+                <h4>Global Sales by Top Locations</h4>
+            </div>
+            <div class="country-maps">
+                <div class="country-sales">
+                    <table class="country-list">
+                        <tr>
+                            <td><img src="images/images/usa-flag.png" alt="usa-flag" class="flag"> USA </td>
+                            <td>2.920</td>
+                            <td>53.23%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/images/germany.png" alt="germany flag" class="flag"> Germany </td>
+                            <td>1.300</td>
+                            <td>4.34%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/images/australia.png" alt="australia flag" class="flag"> Australia
+                            </td>
+                            <td>760</td>
+                            <td>20.43%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/images/uk.png" alt="uk" class="flag"> United Kingdom </td>
+                            <td>690</td>
+                            <td>10.35%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/images/romania.png" alt="romania flag" class="flag"> Romania </td>
+                            <td>600</td>
+                            <td>7.87%</td>
+                        </tr>
+                        <tr>
+                            <td><img src="images/images/brasil.png" alt="brasil flag" class="flag"> Brasil </td>
+                            <td>550</td>
+                            <td>5.94%</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="map-embed">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-73.97968099999999!3d40.6974881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%20City%2C%20New%20York%2C%20Shtetet%20e%20Bashkuara%20t%C3%AB%20Amerik%C3%ABs!5e0!3m2!1ssq!2s!4v1699897654197!5m2!1ssq!2s"
+                        style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="grid-content">
+            <div class="blog-info">
+                <div class="bookings">
+                    <div class="icon">
+                        <span class="material-icons chair">chair</span>
+                    </div>
+                    <div class="grid-info">
+                        <span class="data">Bookings</span>
+                        <span class="numbers">184</span>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="space">
+                    <span class="material-icons">warning</span>Get more space
+                </div>
+            </div>
+
+            <div class="blog-info">
+                <div class="bookings">
+                    <div class="icon">
+                        <span class="material-icons bar-chart">bar_chart</span>
+                    </div>
+                    <div class="grid-info">
+                        <span class="data">Website Visits</span>
+                        <span class="numbers">75.521</span>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="space">
+                    <span class="material-icons">sell</span>Tracked from Google Analytics
+                </div>
+            </div>
+
+            <div class="blog-info">
+                <div class="bookings">
+                    <div class="icon">
+                        <span class="material-icons store">store</span>
+                    </div>
+                    <div class="grid-info">
+                        <span class="data">Revenue</span>
+                        <span class="numbers">$34,245</span>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="space">
+                    <span class="material-icons">date_range</span>Last 24 Hours
+                </div>
+            </div>
+
+            <div class="blog-info">
+                <div class="bookings">
+                    <div class="icon">
+                        <span class="material-icons public">public</span>
+                    </div>
+                    <div class="grid-info">
+                        <span class="data">Followers</span>
+                        <span class="numbers">+245</span>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="space">
+                    <span class="material-icons">update</span>Just updated
+                </div>
+            </div>
+        </div>
+
+
+        <div class="listing">
+            <p class="menage-title">Menage Listings</p>
+        </div>
+
+        <div class="cards-container">
+
+            <div class="card">
+
+                <div class="image-card">
+                    <img src="images/images/card-1.jpeg">
+                    <div class="card-icons">
+                        <span class="material-icons bid_landscape" title="View">bid_landscape</span>
+                        <span class="material-icons delete" title="Delete">close</span>
+                        <span class="material-icons edit" title="Edit">edit</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h4 class="title">Cozy 5 Stars Apartment</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nisi
+                        aliquam deserunt illo
+                        quidem molestiae adipisci ipsam repellendus. Accusamus, saepe in ab et unde maiores iste?
+                        Ratione dolorem alias quas!</p>
+                </div>
+
+                <div class="hr1"></div>
+
+                <div class="bottom-content">
+                    <div class="price-card">
+                        <span>$899/night</span>
+                    </div>
+
+                    <div class="location-card">
+                        <span class="material-icons">location_on</span>
+                        <span>Barcelona,Spain</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card">
+                <div class="image-card">
+                    <img src="images/images/card-2.jpeg">
+                    <div class="card-icons">
+                        <span class="material-icons bid_landscape" title="View">bid_landscape</span>
+                        <span class="material-icons delete" title="Delete">close</span>
+                        <span class="material-icons edit" title="Edit">edit</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h4 class="title">Office Studio</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nisi
+                        aliquam deserunt illo
+                        quidem molestiae adipisci ipsam repellendus. Accusamus, saepe in ab et unde maiores iste?
+                        Ratione dolorem alias quas!</p>
+                </div>
+                <div class="hr1"></div>
+
+                <div class="bottom-content">
+
+                    <div class="price-card">
+                        <span>$1.119/night</span>
+                    </div>
+
+                    <div class="location-card">
+                        <span class="material-icons">location_on</span>
+                        <span>London, UK</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+
+                <div class="image-card">
+                    <img src="images/images/card-3.jpeg">
+
+                    <div class="card-icons">
+                        <span class="material-icons bid_landscape" title="View">bid_landscape</span>
+                        <span class="material-icons delete" title="Delete">close</span>
+                        <span class="material-icons edit" title="Edit">edit</span>
+                    </div>
+                </div>
+                <div class="card-info">
+                    <h4 class="title">Beautiful Castle</h4>
+                    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nisi
+                        aliquam deserunt illo
+                        quidem molestiae adipisci ipsam repellendus. Accusamus, saepe in ab et unde maiores iste?
+                        Ratione dolorem alias quas!</p>
+                </div>
+                <div class="hr1"></div>
+                <div class="bottom-content">
+
+                    <div class="price-card">
+                        <span>$459/night</span>
+                    </div>
+
+                    <div class="location-card">
+                        <span class="material-icons">location_on</span>
+                        <span>Milan, Italy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="hr1"></div>
+
+
+        <footer>
+            <div class="info">
+                <span>Home</span> <span>Company</span> <span>Protofolio</span>
+                <span>Blog</span>
+            </div>
+            <div class="rights">
+                <span>© John Doe 2023</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/index.js" type="module"></script>
+</body>
+
+</html>
