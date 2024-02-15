@@ -19,7 +19,7 @@
         <div class="horizontal-line"></div>
         <div class="profile">
             <div class="profile-image">
-                <img src="images/images/avatar.jpg" alt="John Doe's Profile Picture">
+                <img src="images/avatar.jpg" alt="John Doe's Profile Picture">
             </div>
             <div class="profile-info">
                 <span id="description">John Doe</span>
@@ -162,7 +162,7 @@
             </div>
         </header>
         <span id="settings-icon" class="material-icons" title="Open Settings">settings</span>
-        <div id="settings-div">
+        <div id="settings-div" class="settings-div">
             <p id="sidebar-filter">SIDEBAR FILTERS</p>
             <div class="color-circles">
                 <span class="color-circle selected"></span>
@@ -174,8 +174,8 @@
             </div>
             <div class="separator"></div>
             <p id="sidebar-text">SIDEBAR BACKGROUND</p>
-            <div class="overlay-background">
-                <div class="sidebar-circles">
+            <div class="aside-background">
+                <div class="sidebar-circles" id="sidebar-circles">
                     <div id="white-circle" tabindex="0"></div>
                     <div id="black-circle" tabindex="0"></div>
                 </div>
@@ -194,13 +194,14 @@
             <div class="sidebar-image">
                 <p>IMAGES</p>
                 <div class="image-container">
-                    <img src="images/images/sidebar-1.jpg" class="image" tabindex="0">
-                    <img src="images/images/sidebar-2.jpg" class="image" tabindex="0">
-                    <img src="images/images/sidebar-3.jpg" class="image" tabindex="0">
-                    <img src="images/images/sidebar-4.jpg" class="image" tabindex="0">
+                    <img src="images/sidebar-1.jpg" class="image" tabindex="0">
+                    <img src="images/sidebar-2.jpg" class="image" tabindex="0">
+                    <img src="images/sidebar-3.jpg" class="image" tabindex="0">
+                    <img src="images/sidebar-4.jpg" class="image" tabindex="0">
                 </div>
             </div>
         </div>
+
         <div class="column-1">
             <div class="global-title">
                 <span class="material-icons glob-icon">language</span>
@@ -210,33 +211,33 @@
                 <div class="country-sales">
                     <table class="country-list">
                         <tr>
-                            <td><img src="images/images/usa-flag.png" alt="usa-flag" class="flag"> USA </td>
+                            <td><img src="images/usa-flag.png" alt="usa-flag" class="flag"> USA </td>
                             <td>2.920</td>
                             <td>53.23%</td>
                         </tr>
                         <tr>
-                            <td><img src="images/images/germany.png" alt="germany flag" class="flag"> Germany </td>
+                            <td><img src="images/germany.png" alt="germany flag" class="flag"> Germany </td>
                             <td>1.300</td>
                             <td>4.34%</td>
                         </tr>
                         <tr>
-                            <td><img src="images/images/australia.png" alt="australia flag" class="flag"> Australia
+                            <td><img src="images/australia.png" alt="australia flag" class="flag"> Australia
                             </td>
                             <td>760</td>
                             <td>20.43%</td>
                         </tr>
                         <tr>
-                            <td><img src="images/images/uk.png" alt="uk" class="flag"> United Kingdom </td>
+                            <td><img src="images/uk.png" alt="uk" class="flag"> United Kingdom </td>
                             <td>690</td>
                             <td>10.35%</td>
                         </tr>
                         <tr>
-                            <td><img src="images/images/romania.png" alt="romania flag" class="flag"> Romania </td>
+                            <td><img src="images/romania.png" alt="romania flag" class="flag"> Romania </td>
                             <td>600</td>
                             <td>7.87%</td>
                         </tr>
                         <tr>
-                            <td><img src="images/images/brasil.png" alt="brasil flag" class="flag"> Brasil </td>
+                            <td><img src="images/brasil.png" alt="brasil flag" class="flag"> Brasil </td>
                             <td>550</td>
                             <td>5.94%</td>
                         </tr>
@@ -323,107 +324,18 @@
         <div class="listing">
             <p class="menage-title">Menage Listings</p>
         </div>
-
-        <div class="cards-container">
-
-            <div class="card">
-
-                <div class="image-card">
-                    <img src="images/images/card-1.jpeg">
-                    <div class="card-icons">
-                        <span class="material-icons bid_landscape" title="View">bid_landscape</span>
-                        <span class="material-icons delete" title="Delete">close</span>
-                        <span class="material-icons edit" title="Edit">edit</span>
-                    </div>
-                </div>
-                <div class="card-info">
-                    <h4 class="title">Cozy 5 Stars Apartment</h4>
-                    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nisi
-                        aliquam deserunt illo
-                        quidem molestiae adipisci ipsam repellendus. Accusamus, saepe in ab et unde maiores iste?
-                        Ratione dolorem alias quas!</p>
-                </div>
-
-                <div class="hr1"></div>
-
-                <div class="bottom-content">
-                    <div class="price-card">
-                        <span>$899/night</span>
-                    </div>
-
-                    <div class="location-card">
-                        <span class="material-icons">location_on</span>
-                        <span>Barcelona,Spain</span>
-                    </div>
-                </div>
-
+         <div class="cards-container">
+            <div id="editModal" class="modal">
+               <div class="modal-content">
+                  <span class="close">&times;</span>
+                  <label for="newName">New Name:</label>
+                  <input type="text" id="newName" name="newName">
+                  <button id="saveChanges">Save Changes</button>
+               </div>
             </div>
-
-            <div class="card">
-                <div class="image-card">
-                    <img src="images/images/card-2.jpeg">
-                    <div class="card-icons">
-                        <span class="material-icons bid_landscape" title="View">bid_landscape</span>
-                        <span class="material-icons delete" title="Delete">close</span>
-                        <span class="material-icons edit" title="Edit">edit</span>
-                    </div>
-                </div>
-                <div class="card-info">
-                    <h4 class="title">Office Studio</h4>
-                    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nisi
-                        aliquam deserunt illo
-                        quidem molestiae adipisci ipsam repellendus. Accusamus, saepe in ab et unde maiores iste?
-                        Ratione dolorem alias quas!</p>
-                </div>
-                <div class="hr1"></div>
-
-                <div class="bottom-content">
-
-                    <div class="price-card">
-                        <span>$1.119/night</span>
-                    </div>
-
-                    <div class="location-card">
-                        <span class="material-icons">location_on</span>
-                        <span>London, UK</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card">
-
-                <div class="image-card">
-                    <img src="images/images/card-3.jpeg">
-
-                    <div class="card-icons">
-                        <span class="material-icons bid_landscape" title="View">bid_landscape</span>
-                        <span class="material-icons delete" title="Delete">close</span>
-                        <span class="material-icons edit" title="Edit">edit</span>
-                    </div>
-                </div>
-                <div class="card-info">
-                    <h4 class="title">Beautiful Castle</h4>
-                    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium nisi
-                        aliquam deserunt illo
-                        quidem molestiae adipisci ipsam repellendus. Accusamus, saepe in ab et unde maiores iste?
-                        Ratione dolorem alias quas!</p>
-                </div>
-                <div class="hr1"></div>
-                <div class="bottom-content">
-
-                    <div class="price-card">
-                        <span>$459/night</span>
-                    </div>
-
-                    <div class="location-card">
-                        <span class="material-icons">location_on</span>
-                        <span>Milan, Italy</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
+   
+         </div>
+        
         <div class="hr1"></div>
 
 

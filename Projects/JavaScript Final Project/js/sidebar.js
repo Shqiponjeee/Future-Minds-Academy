@@ -2,6 +2,8 @@ let sidebarrotate = document.getElementById('sidebar');
 let expandIcon = document.getElementById('expandIcon');
 let listItems = document.querySelectorAll('.li-item');
 
+
+
 expandIcon.addEventListener('click', () => {
     sidebar.classList.toggle('expanded');
 });
@@ -13,11 +15,17 @@ listItems.forEach(item => {
 });
 
 
+let sidebarControl=document.getElementById('sidebar-control');
+let sidebar=document.getElementById('sidebar');
 
-document.getElementById('sidebar-control').addEventListener('click', function() {
-    document.getElementById('sidebar').classList.toggle('collapsed');
-    document.querySelector('.main-content').classList.toggle('collapsed');
+sidebarControl.addEventListener('click', () => {
+    sidebar.classList.toggle('collapsed');
 
+    if (sidebar.classList.contains('collapsed')) {
+        sidebarControl.innerHTML = 'menu';
+    } else {
+        sidebarControl.innerHTML = 'more_vert';
+    }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -39,16 +47,5 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/*
-document.getElementById('sidebar-control').addEventListener('click', function() {
-    var sidebar = document.getElementById('sidebar');
-    sidebar.classList.toggle('collapsed');
 
-    var menuIcon = document.getElementById('menu-icon');
-    var seeMoreIcon = document.getElementById('sidebar-control');
-
-    menuIcon.classList.toggle('collapsed');
-    seeMoreIcon.classList.toggle('collapsed');
-});
-*/
 
