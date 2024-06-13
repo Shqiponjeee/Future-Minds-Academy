@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <Script>
+        movies.sort((a, b) => b.rating - a.rating);
+        // movies.sort((a, b) => a.rating - b.rating).reverse();
+
+        let content = document.createElement('div');
+        content.classList.add('content');
+
+
+        movies.forEach((movie, index) => {
+            let listItem = document.createElement('li');
+            listItem.classList.add('movie');
+
+            if (index == 0) {
+                listItem.classList.add('highest-rated')
+            }
+
+            let image = document.createElement('img');
+            image.src = movie.imageUrl;
+            image.addEventListener('click', function () {
+
+                togglePopup(movie);
+            });
+
+            listItem.appendChild(image);
+            content.appendChild(listItem);
+
+            setInterval(() => {
+                listItem.style.opacity = '1';
+                listItem.style.transform = 'translateY(0)';
+            }, 1000 * index)
+        });
+
+        function togglePopup(movie) {
+
+            let popupDiv = document.getElementById('popup');
+            let body = document.body;
+
+            if (popupDiv.style.display = 'block') {
+                popupDiv.style.display = 'none';
+                popupDiv.innerHTML = '';
+                body.classList.remove('popup-open');
+
+            }
+
+            else {
+                popupDiv.innerHTML = `
+                <h3>${movie.name}</h3><br>
+                <p>Main Actors: ${movie.mainActors.join(',')}</p>
+                <p id="popup-price">Rating: ${movie.rating}</p><br>
+
+                `;
+
+                popupDiv.style.display = 'block';
+                body.classList.add('popup-open');
+            }
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.body.classList.remove('popup-open');
+        }
+
+
+        document.body.appendChild(content);
+
+
+
+    </Script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // setTimeout example
+        setTimeout(function () {
+            console.log("This code will be executed once after a 2-second delay.");
+        }, 2000);
+
+        // setInterval example
+        setInterval(function () {
+            console.log("This code will be executed every 1 second.");
+        }, 1000);
+
+
+        // Define a function that will be executed after a delay
+        function greeting() {
+            console.log("Hello, world!");
+        }
+
+        // Use setTimeout to delay the execution of the function by 3 seconds (3000 milliseconds)
+        setTimeout(greeting, 3000);
+
+
+
+        const category = {
+            movies: [
+                {
+                    title: "blah bla",
+                    year: 1994
+                }
+               
+            ]
+        };
+
+       
+        const firstMovieTitle = category.movies[0].title;
+        const firstMovieYear = category.movies[0].year;
+
+        console.log("Title:", firstMovieTitle);
+        console.log("Year:", firstMovieYear);
+    </script>
+</body>
+
+</html>

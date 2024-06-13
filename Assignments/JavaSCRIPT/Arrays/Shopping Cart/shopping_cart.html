@@ -101,12 +101,12 @@
             }
         ];
 
-        const totalPrice = cart.reduce((total, item) => total + (item.quantity * item.price), 0);
+        let totalPrice = cart.reduce((total, item) => total + (item.quantity * item.price), 0);
 
-        const itemList = document.createElement('ul');
+        let itemList = document.createElement('ul');
 
         cart.forEach(item => {
-            const listItem = document.createElement('li');
+            let listItem = document.createElement('li');
             listItem.innerHTML = `
             <span>${item.title}</span>
             <span>${item.quantity} * ${item.price.toFixed(2)} = ${(item.quantity * item.price).toFixed(2)}$</span>
@@ -114,7 +114,7 @@
             itemList.appendChild(listItem);
         });
 
-        const totalElement = document.createElement('strong');
+        let totalElement = document.createElement('strong');
         totalElement.textContent = `Total Price: ${totalPrice.toFixed(2)}$`;
 
         document.body.innerHTML = '';

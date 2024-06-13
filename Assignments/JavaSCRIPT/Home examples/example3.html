@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let movies = [
+            {
+                name: 'The Godfather',
+                releaseYear: 1972,
+                rating: 9.2,
+                mainActors: ['Marlon Brando', 'Al Pacino', 'James Caan'],
+                imageUrl: 'images/the-god-father.jpg'
+
+            },
+            {
+                name: 'The Shawshank Redemption',
+                releaseYear: 1994,
+                rating: 9.3,
+                mainActors: ['Tim Robbins', 'Morgan Freeman', 'Bob Gunton'],
+                imageUrl: 'images/the-shawshank-redemption.jpg'
+            },
+            {
+                name: 'Pulp Fiction',
+                releaseYear: 1994,
+                rating: 8.9,
+                mainActors: ['John Travolta', 'Uma Thurman', 'Samuel L. Jackson'],
+                imageUrl: 'images/pulp-fiction.jpg'
+            },
+            {
+                name: 'The Dark Knight',
+                releaseYear: 2008,
+                rating: 9.0,
+                mainActors: ['Christian Bale', 'Heath Ledger', 'Aaron Eckhart'],
+                imageUrl: 'images/the-dark-Knigh.jpg'
+            },
+            {
+                name: 'Forrest Gump',
+                releaseYear: 1994,
+                rating: 8.8,
+                mainActors: ['Tom Hanks', 'Robin Wright', 'Gary Sinise'],
+                imageUrl: 'images/forrest-gump.jpg'
+            }
+        ];
+
+        movies.sort((a, b) => b.rating - a.rating);
+
+        let content = document.createElement('div');
+        content.classList.add('content');
+
+        movies.forEach((movie, index) => {
+            listItem = document.createElement('li');
+            listItem.classList.add('movies');
+
+            let image = document.createElement('img');
+            image.src = movie.imageUrl;
+            image.addEventListener('click', function () {
+                togglePopup(movie)
+            }
+            );
+            listItem.appendChild(image);
+            content.appendChild(listItem);
+        });
+
+        function togglePopup(movie) {
+            let popupDiv = document.getElementById('popup');
+
+            if (popupDiv.style.display == 'block') {
+                popupDiv.style.display = 'none'
+                popupDiv.innerHTML = '';
+                popupDiv.classList.remove('popup-class');
+
+            } else {
+                popupDiv.style.display = 'block'
+                popupDiv.innerHTML = `
+    <h3>${movie.name}</h3>
+    <p>${movie.mainActors.join(', ')}</p>
+    <p>${movie.rating}</p>`
+                popupDiv.classList.add('popup-class');
+            }
+        }
+        function closePopup() {
+            let popupDiv = document.getElementById('popup').style.display = 'none';
+        }
+        document.body.appendChild(content);
+
+    </script>
+</body>
+
+</html>

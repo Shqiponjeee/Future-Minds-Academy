@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: monospace;
+
+}
+
+.correct-answer {
+    padding: 2rem;
+    background-color: black;
+    border-radius: 5px;
+}
+.title {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.players {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.first-player,
+.second-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 1px solid transparent;
+    gap: 0.5em;
+    padding: 0.5rem;
+}
+
+#first-answer {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#second-answer {
+    font-size: 1.5rem;
+    font-weight: bold;
+}

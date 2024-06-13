@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="progress-bar-container">
+        <span class="indicator">100%</span>
+        <div class="progress-bar-wrapper" id="bar">
+            <div class="progress-bar" id="progress"></div>
+            <div class="tooltip">0%</div>
+        </div>
+        <span class="indicator">0%</span>
+    </div>
+
+    <script>
+        function isValidPercentage(number) {
+            return !isNaN(number) && number >= 0 && number <= 100;
+
+        }
+
+        function getProgressColor(percentage) {
+            if (percentage <= 20 || percentage <= 50) return "red";
+            else if (percentage >= 50 && percentage <= 80) return "orange";
+            else return "green"
+        }
+
+        function modifyProgressBar(percentage, color) {
+            let progressBar = document.getElementById('progress');
+            let tooltip = document.querySelector('.tooltip');
+            progressBar.style.backgroundColor = color;
+            progressBar.style.height = `${percentage}`;
+            tooltip.innerText = `${percentage}%`;
+        }
+
+        function setProgress() {
+            let randomPercentage = Math.floor(Math.random() * 101);
+            if (isValidPercentage(randomPercentage)) {
+                let color = getProgressColor(randomPercentage);
+                modifyProgressBar(randomPercentage, color);
+            }
+        }
+        setInterval(setProgress, 2000);
+    </script>
+</body>
+
+</html>
